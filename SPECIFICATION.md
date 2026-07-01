@@ -27,6 +27,9 @@ When engineering asset distribution networks or installer frameworks, file forma
 
 An AFS archive begins with a lightweight, fixed-size 8-byte Global Header that establishes file identity and basic configuration states. Based on Bit 1 of the Global Flags the Header can extend to house global extensions, which are predictable in size and can be ommited.
 
+**Note: The format uses Little Endian for byte order.**
+Because most desktops, laptops, smartphones and modern processor run natively on Litte Endian.
+
 ### 2.1 Fixed Header Layout
 
 | Magic Signature | Format Version | Global Flags | Conditional Global Extension Block
